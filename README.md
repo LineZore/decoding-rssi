@@ -21,6 +21,7 @@ This repository provides the complete code and data required to reproduce key fi
 ## Contents Overview
 
 ### 📁 Data Files
+
 ```text
 data/
 ├── processed_data/     # Processed data derived from raw data
@@ -38,6 +39,7 @@ data/
 ```
 
 ### 🐍 Code Files
+
 ```text
 src/
 ├── matlab/             # MATLAB scripts for analyzing the robustness of BPI (Figure 16)
@@ -107,12 +109,14 @@ Other available scripts for generating figures include:​
 python ./src/cdf.py
 python ./src/discdf.py
 ```
+
 Further processing is required before drawing figure 14 or figure 15:
 
 ``` bash
 python ./src/Fig14_process.py
 python ./src/Fig15_process.py
 ```
+
 And run:
 
 ``` bash
