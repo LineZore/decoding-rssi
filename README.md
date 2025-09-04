@@ -21,7 +21,7 @@ This repository provides the complete code and data required to reproduce key fi
 ## Contents Overview
 
 ### 📁 Data Files
-```
+```text
 data/
 ├── processed_data/     # Processed data derived from raw data
 │   ├── 3d/             # Data used to generate Figure 16
@@ -38,7 +38,7 @@ data/
 ```
 
 ### 🐍 Code Files
-```
+```text
 src/
 ├── matlab/             # MATLAB scripts for analyzing the robustness of BPI (Figure 16)
 ├── cdf.py              # Python script for plotting errors of the in-situ method (Figure 17)
@@ -103,17 +103,19 @@ python ./src/diff.py
 
 Other available scripts for generating figures include:​
 
-```
+```bash
 python ./src/cdf.py
 python ./src/discdf.py
 ```
 Further processing is required before drawing figure 14 or figure 15:
-```
+
+``` bash
 python ./src/Fig14_process.py
 python ./src/Fig15_process.py
 ```
 And run:
-```
+
+``` bash
 python ./src/Fig14.py
 python ./src/Fig15.py
 ```
