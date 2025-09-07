@@ -15,6 +15,9 @@ figure_path='./figure/'
 file_path="./data/"
 output_path="./data/processed_data/"
 
+if os.path.exists(output_path)==False:
+    os.mkdir(output_path)
+    
 if os.path.exists(output_path+"itp/")==False:
     os.mkdir(output_path+"itp")
 
@@ -205,4 +208,5 @@ for ttag in range(5):
                 fix_rssi_mean=np.abs(np.nanmean(fix_rssi_error, axis=1))
 
                 y_avg_values_str = ' '.join(map(str,fix_rssi_mean))
+
                 file.write(y_avg_values_str+'\n')
