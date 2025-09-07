@@ -27,6 +27,9 @@ output_path="./data/processed_data/"
 if os.path.exists(output_path)==False:
     os.mkdir(output_path)
 
+if os.path.exists(output_path+"csv/")==False:
+    os.mkdir(output_path+"csv")
+
 x_reader=[[10.0+i*0.25 for i in range(91)],range(15,31,1)]
 target_ptx_ind=x_reader[reader_cho].index(target_ptx)
 
@@ -113,4 +116,5 @@ for target_tag in range(5):
             file.write(y_avg_values_str+'\n')
             y_avg_values_str = ' '.join(map(str,y[mask]))
             file.write(y_avg_values_str+'\n')
+
 
