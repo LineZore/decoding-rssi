@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import math
 
 #Reference distance for estimating ITP using in-situ method
@@ -10,10 +11,23 @@ target_tag=0
 #Choose whether to update RSSI distance data
 rssi_cor_dis_option=1
 
-color_arr=['red','yellow','orange','green','blue']
 figure_path='./figure/'
 file_path="./data/"
 output_path="./data/processed_data/"
+
+if os.path.exists(output_path+"itp/")==False:
+    os.mkdir(output_path+"itp")
+
+if os.path.exists(output_path+"dis/")==False:
+    os.mkdir(output_path+"dis")
+
+if os.path.exists(output_path+"3d/")==False:
+    os.mkdir(output_path+"3d")
+
+if os.path.exists(output_path+"csv/")==False:
+    os.mkdir(output_path+"csv")
+
+color_arr=['red','yellow','orange','green','blue']
 reader_name='R420'
 tag_name=['U8','R6P','9640']
 distance=[2,3,4,5,6,7,8]
@@ -191,5 +205,4 @@ for ttag in range(5):
                 fix_rssi_mean=np.abs(np.nanmean(fix_rssi_error, axis=1))
 
                 y_avg_values_str = ' '.join(map(str,fix_rssi_mean))
-
                 file.write(y_avg_values_str+'\n')
