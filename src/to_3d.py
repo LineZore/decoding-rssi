@@ -8,7 +8,7 @@ ref_dis=4
 #Target tag, select one of the five tags of the same type, range 0-4
 target_tag=0
 #Choose whether to update RSSI distance data
-rssi_cor_dis_option=0
+rssi_cor_dis_option=1
 
 color_arr=['red','yellow','orange','green','blue']
 figure_path='./figure/'
@@ -191,4 +191,5 @@ for ttag in range(5):
                 fix_rssi_mean=np.abs(np.nanmean(fix_rssi_error, axis=1))
 
                 y_avg_values_str = ' '.join(map(str,fix_rssi_mean))
+
                 file.write(y_avg_values_str+'\n')
