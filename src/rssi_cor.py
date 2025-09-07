@@ -1,5 +1,5 @@
 import numpy as np
-import math
+import os
 from matplotlib import pyplot as plt
 
 #Reference distance for correcting RSSI
@@ -22,6 +22,10 @@ line_arr=['-','--','-.',':']
 ref_dis_ind=distance.index(ref_dis)
 target_dis_ind=distance.index(target_dis)
 
+output_path="./data/processed_data/"
+
+if os.path.exists(output_path)==False:
+    os.mkdir(output_path)
 
 x_reader=[[10.0+i*0.25 for i in range(91)],range(15,31,1)]
 target_ptx_ind=x_reader[reader_cho].index(target_ptx)
