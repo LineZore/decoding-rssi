@@ -1,4 +1,4 @@
-function [  ] = fun_set_axis_size( x_label, y_label, z_label,size,a)
+function [  ] = fun_set_3daxis_size( x_label, y_label, z_label,size,a)
 %FUN_SET_AXIS Summary of this function goes here
 %   Detailed explanation goes here
 %   size: font size 
@@ -17,4 +17,5 @@ zlabel(z_label,'Fontsize',label_size,'fontname','Times New Roman');
 
 
 end
+
 
