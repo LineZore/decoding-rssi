@@ -2,10 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 
-# 要绘制的距
+# Target distance
 target_distance=2
-#要画的图，1是阴影图，2是每个标签的，3和4是9900的
-draw_mod=1
 
 plt.rcParams['font.family'] = ['Times New Roman']
 plt.rcParams['figure.figsize'] = [6, 5]
