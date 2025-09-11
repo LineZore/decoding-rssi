@@ -172,7 +172,7 @@ This section provides a comprehensive overview of the dataset structure, data pr
 Files such as `R420_9640.txt`, `9900_9640.txt` contain **RSSI readings** collected from the readers (R420 or 9900) and different tags.
 
 - **Structure:**
-  - **7 segments**, each corresponding to a fixed **tag-to-reader distance**: 2 m, 3 m, 4 m, 5 m, 6 m, 7 m, 8 m.
+  - **7 segments**, each corresponding to a fixed **tag-to-reader distance**: 2 m, 3 m, 4 m, 5 m, 6 m, 7 m, 8 m. (`R420_H47.txt` is different, it includes data of 1m, 2m, 3m, 4m, 6m, 8m, 9m)
   - **5 lines per segment**, where each line represents an **individual RFID tag sample**.
   - **91 RSSI values per line**, corresponding to **transmit power levels** ranging from **10 dBm to 32.5 dBm** with a **step size of 0.25 dBm**.
 
